@@ -86,24 +86,24 @@ typedef enum {
 
 #if LV_BIG_ENDIAN_SYSTEM
 typedef struct {
-    uint32_t reserved_2: 16;    /**< Reserved to be used later*/
-    uint32_t stride: 16;        /**< Number of bytes in a row*/
-    uint32_t h: 16;
-    uint32_t w: 16;
-    uint32_t flags: 16;         /**< Image flags, see `lv_image_flags_t`*/
-    uint32_t cf : 8;            /**< Color format: See `lv_color_format_t`*/
-    uint32_t magic: 8;          /**< Magic number. Must be LV_IMAGE_HEADER_MAGIC*/
+    uint32_t reserved_2;    /**< Reserved to be used later*/
+    uint32_t stride;        /**< Number of bytes in a row*/
+    uint32_t h;
+    uint32_t w;
+    uint32_t flags;         /**< Image flags, see `lv_image_flags_t`*/
+    uint32_t cf;            /**< Color format: See `lv_color_format_t`*/
+    uint32_t magic;         /**< Magic number. Must be LV_IMAGE_HEADER_MAGIC*/
 } lv_image_header_t;
 #else
 typedef struct {
-    uint32_t magic: 8;          /**< Magic number. Must be LV_IMAGE_HEADER_MAGIC*/
-    uint32_t cf : 8;            /**< Color format: See `lv_color_format_t`*/
-    uint32_t flags: 16;         /**< Image flags, see `lv_image_flags_t`*/
+    uint32_t magic;         /**< Magic number. Must be LV_IMAGE_HEADER_MAGIC*/
+    uint32_t cf;            /**< Color format: See `lv_color_format_t`*/
+    uint32_t flags;         /**< Image flags, see `lv_image_flags_t`*/
 
-    uint32_t w: 16;
-    uint32_t h: 16;
-    uint32_t stride: 16;        /**< Number of bytes in a row*/
-    uint32_t reserved_2: 16;    /**< Reserved to be used later*/
+    uint32_t w;
+    uint32_t h;
+    uint32_t stride;        /**< Number of bytes in a row*/
+    uint32_t reserved_2;    /**< Reserved to be used later*/
 } lv_image_header_t;
 #endif
 

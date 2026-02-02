@@ -69,9 +69,9 @@ struct _lv_subject_t {
     lv_subject_value_t min_value;        /**< Minimum value for min. int or float*/
     lv_subject_value_t max_value;        /**< Maximum value for max. int or float*/
     void * user_data;                    /**< Additional parameter, can be used freely by user */
-    uint32_t type                 :  4;  /**< One of the LV_SUBJECT_TYPE_... values */
-    uint32_t size                 : 24;  /**< String buffer size or group length */
-    uint32_t notify_restart_query :  1;  /**< If an Observer was deleted during notification,
+    uint32_t type;                       /**< One of the LV_SUBJECT_TYPE_... values */
+    uint32_t size;                       /**< String buffer size or group length */
+    uint32_t notify_restart_query;       /**< If an Observer was deleted during notification,
                                           * start notifying from the beginning. */
 };
 

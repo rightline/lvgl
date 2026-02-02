@@ -143,7 +143,7 @@ typedef struct {
 
     /**Set `bg_cover` to 1 if the background will cover the shadow.
      * It's a hint to the renderer about it might skip some masking.*/
-    uint8_t bg_cover    : 1;
+    uint8_t bg_cover;
 } lv_draw_box_shadow_dsc_t;
 
 /**********************

@@ -88,21 +88,21 @@ typedef struct {
     lv_opa_t outline_stroke_opa;
 
     /**Text decoration, e.g. underline*/
-    lv_text_decor_t decor : 3;
+    lv_text_decor_t decor;
 
     /**Some flags to control type setting*/
-    lv_text_flag_t flag : 5;
+    lv_text_flag_t flag;
 
     /**1: malloc a buffer and copy `text` there.
      * 0: `text` will be valid during rendering.*/
-    uint8_t text_local : 1;
+    uint8_t text_local;
 
     /**Indicate that the text is constant and its pointer can be safely saved e.g. in a cache.*/
-    uint8_t text_static : 1;
+    uint8_t text_static;
 
     /**1: already executed lv_bidi_process_paragraph.
      * 0: has not been executed lv_bidi_process_paragraph.*/
-    uint8_t has_bided : 1;
+    uint8_t has_bided;
 
     /**Pointer to an externally stored struct where some data can be cached to speed up rendering*/
     lv_draw_label_hint_t * hint;

@@ -177,10 +177,10 @@ typedef struct {
     lv_opa_t drop_shadow_opa;
 
     /**Drop shadow blur radius*/
-    int32_t drop_shadow_blur_radius: 20;
+    int32_t drop_shadow_blur_radius;
 
     /**Drop shadow blur quality*/
-    lv_blur_quality_t drop_shadow_quality : 3;
+    lv_blur_quality_t drop_shadow_quality;
 
     /**Size of the specific draw descriptor into which this base descriptor is embedded*/
     size_t dsc_size;
